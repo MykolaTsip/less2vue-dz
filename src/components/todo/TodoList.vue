@@ -39,9 +39,6 @@
             }
         },
 
-        // methods: {
-        //
-        // },
 
 
         created() {
@@ -50,12 +47,6 @@
 
             })
 
-
-            if (this.todoE !== '') {
-                this.todos.push(this.todoE)
-                console.log(this.todoE)
-                console.log(this.todos)
-            }
         },
 
 

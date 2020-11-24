@@ -9,14 +9,14 @@
         <button @click="addTodo">ADD NEW TOdo</button>
         </div>
 
-            <div class="inp">
-        <input
-                type="text"
-                placeholder="add new todo with EMITER"
-                v-model="valueEmiter"
-        >
-        <button @click="addTodoEmiter">ADD new todo with emiter</button>
-            </div>
+<!--            <div class="inp">-->
+<!--        <input-->
+<!--                type="text"-->
+<!--                placeholder="add new todo with EMITER"-->
+<!--                v-model="valueEmiter"-->
+<!--        >-->
+<!--        <button @click="addTodoEmiter">ADD new todo with emiter</button>-->
+<!--            </div>-->
     </div>
 </template>
 
