@@ -1,28 +1,47 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <h1>
+            Homework № 2
+        </h1>
+        <TodoAdd @todoEmit="addTodo"/>
+        <hr>
+        <TodoList :todoE="todoE"/>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+    import TodoList from "./components/todo/TodoList";
+    import TodoAdd from "./components/todo/TodoAdd";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    export default {
+        name: 'App',
+        components: {
+            TodoAdd,
+            TodoList
+        },
+
+        data() {
+            return {
+                todoE: ''
+            }
+        },
+
+        methods: {
+            // todoEmit(event) {
+            //     this.todoE = event
+            //     // console.log(this.todoE)
+            // }
+
+            addTodo(event) {
+                this.todoE = event
+                // console.log(this.todoE)
+            }
+        },
+    }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+    h1 {
+        text-align: center;
+    }
 </style>
